@@ -29,3 +29,6 @@ HOSTNAME=${HOSTNAME:-"Arch1234"}
 read -p "Enter Host Name [Default => en_IN.UTF-8]: " HOSTNAME
 HOSTNAME=${HOSTNAME:-"en_IN.UTF-8"}
 
+#Set Up Boot Type:-
+read -p "Enter Boot Type UEFI/MBR: " BOOT
+
