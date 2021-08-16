@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "======================================================================"
+echo "=================== Installing essential packages ===================="
+echo "======================================================================"
 packages=(
       'bash-completion'   #Tab completion for Bash
       'neofetch'          #Showing system info
@@ -32,4 +35,17 @@ packages=(
       'elisa'
       'kamoso'
 
+      #Bootloader
+      'grub'
+      'efibootmgr'
+      'os-prober'
 )
+
+for PKG in "${packages[@]}"; do
+    echo "INSTALLING: ${PKG}"
+    sudo pacman -S "$PKG" --noconfirm --needed
+done
+
+echo "======================================================================"
+echo "====================Package installation Complete====================="
+echo "======================================================================"

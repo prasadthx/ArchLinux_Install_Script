@@ -1,7 +1,8 @@
 #!/bin/bash
 
-#Sync Pacman Repository
-pacman -Syy
+echo "======================================================================"
+echo "=========================== Partition Disk ==========================="
+echo "======================================================================"
 
 #Listing the available disks
 lsblk
@@ -9,7 +10,7 @@ lsblk
 #Select the disk for partitioning:-
 read -p "Select the disk for partition:- " DISK
 
-if [ $BIOS=="UEFI" ]; then
+if [ "${BIOS}"=="UEFI" ]; then
     sgdisk -Z $DISK
     sgdisk -a 2048 -o ${DISK}
     sgdisk -n 1:0:+500M ${DISK} # partition 1 => EFI Partition
@@ -40,5 +41,11 @@ mkdir -p /mnt/boot/efi
 mount "${DISK}2" /mnt
 mount "${DISK}1" /mnt/boot/efi
 swapon "${DISK}3"
+
+lsblk
+
+echo "======================================================================"
+echo "=====================Disk Partitioning Complete======================="
+echo "======================================================================"
 
 

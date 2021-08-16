@@ -1,5 +1,10 @@
 #! /bin/bash
 
+echo "======================================================================"
+echo "====================== Setting Up Arch Linux ========================="
+echo "======================================================================"
+
+
 #Sync the pacman repository
 pacman -Syy
 
@@ -44,3 +49,7 @@ echo "root:${PASSWORD}" | chpasswd
 useradd -aG wheel ${USERNAME}
 echo "${USERNAME}:${PASSWORD}" | chpasswd
 sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
+
+echo "======================================================================"
+echo "======================= Setting Up Complete =========================="
+echo "======================================================================"
