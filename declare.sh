@@ -18,17 +18,17 @@ read -p "Enter Host Name [Default => ArchLinux]: " HOSTNAME
 HOSTNAME=${HOSTNAME:-"ArchLinux"}
 
 #Set Up UserName:
-read -p "Enter User Name [Default => archuser]: " HOSTNAME
-HOSTNAME=${HOSTNAME:-"archuser"}
+read -p "Enter User Name [Default => archuser]: " USERNAME
+USERNAME=${USERNAME:-"archuser"}
 
 #Set Up Password:-
-read -p "Enter Host Name [Default => Arch1234]: " HOSTNAME
-HOSTNAME=${HOSTNAME:-"Arch1234"}
+read -p "Enter Host Name [Default => Arch1234]: " PASSWORD
+PASSWORD=${PASSWORD:-"Arch1234"}
 
 #Set Up Language:-
-read -p "Enter Host Name [Default => en_IN.UTF-8]: " HOSTNAME
-HOSTNAME=${HOSTNAME:-"en_IN.UTF-8"}
+read -p "Enter Host Name [Default => en_IN.UTF-8]: " LANGUAGE
+LANGUAGE=${LANGUAGE:-"en_IN.UTF-8"}
 
 #Set Up Boot Type:-
-read -p "Enter Boot Type UEFI/MBR: " BOOT
+read -p "Enter Boot Type UEFI/BIOS: " BOOT
 
