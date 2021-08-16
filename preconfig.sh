@@ -47,7 +47,7 @@ done <<< "$disks"
 #Making the FileSystems
 mkfs.vfat -F32 -n "EFI" "${partitionNames[1]}"
 mkfs.ext4 -L "Root" "${partitionNames[2]}" -F
-mkswap -L "Swap" "${partitionNames[3]}"
+mkswap "${partitionNames[3]}"
 
 
 #Mounting the disks
