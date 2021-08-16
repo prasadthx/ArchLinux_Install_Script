@@ -1,8 +1,13 @@
 #!/bin/bash
 
+
+clear
+
 echo "======================================================================"
 echo "=========================== Partition Disk ==========================="
 echo "======================================================================"
+
+sleep 3
 
 #Listing the available disks
 lsblk
@@ -15,7 +20,7 @@ if [ "${BIOS}"=="UEFI" ]; then
     sgdisk -a 2048 -o ${DISK}
     sgdisk -n 1:0:+500M ${DISK} # partition 1 => EFI Partition
     sgdisk -n 2:0:-2G ${DISK} # partition 2 => Root Partition
-    sgdisk -n 3:0:+2G ${DISK} # partition 3 => Swap Partition
+    sgdisk -n 3:0:0 ${DISK} # partition 3 => Swap Partition
     # set partition types
     sgdisk -t 1:ef00 ${DISK}
     sgdisk -t 2:8300 ${DISK}
@@ -47,5 +52,7 @@ lsblk
 echo "======================================================================"
 echo "=====================Disk Partitioning Complete======================="
 echo "======================================================================"
+
+sleep 3
 
 

@@ -31,4 +31,6 @@ LANGUAGE=${LANGUAGE:-"en_IN.UTF-8"}
 
 #Set Up Boot Type:-
 read -p "Enter Boot Type UEFI/BIOS: " BOOT
+BOOT=${BOOT:-"UEFI"}
 
+sleep 3
