@@ -43,9 +43,9 @@ mkswap -L "Swap" "${DISK}3"
 
 #Mounting the disks
 mkdir -p /mnt/boot/efi
-mount "${DISK}2" /mnt
-mount "${DISK}1" /mnt/boot/efi
-swapon "${DISK}3"
+mount -L "EFI" /mnt
+mount -L "Root" /mnt/boot/efi
+swapon -L "Swap"
 
 lsblk
 
