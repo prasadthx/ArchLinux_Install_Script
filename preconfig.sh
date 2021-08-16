@@ -45,16 +45,16 @@ done <<< "$disks"
 
 
 #Making the FileSystems
-mkfs.vfat -F32 -n "EFI" "${partitionNames[1]}"
-mkfs.ext4 -L "Root" "${partitionNames[2]}" -F
-mkswap "${partitionNames[3]}"
+mkfs.vfat -F32 -n "EFI" "${partitionNames[0]}"
+mkfs.ext4 -L "Root" "${partitionNames[1]}" -F
+mkswap "${partitionNames[2]}"
 
 
 #Mounting the disks
 mkdir -p /mnt/boot/efi
-mount ${partitionNames[2]} /mnt
-mount ${partitionNames[1]} /mnt/boot/efi
-swapon ${partitionNames[3]}
+mount ${partitionNames[1]} /mnt
+mount ${partitionNames[0]} /mnt/boot/efi
+swapon ${partitionNames[2]}
 
 lsblk
 
