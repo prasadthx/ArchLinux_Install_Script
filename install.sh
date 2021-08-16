@@ -40,4 +40,7 @@ echo "
 
 
 #Setting Passwords
-passwd
+echo "root:${PASSWORD}" | chpasswd
+useradd -aG wheel ${USERNAME}
+echo "${USERNAME}:${PASSWORD}" | chpasswd
+sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
