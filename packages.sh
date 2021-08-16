@@ -29,5 +29,7 @@ packages=(
       'cups'
       'bluez'
       'okular'
+      'elisa'
+      'kamoso'
 
 )
