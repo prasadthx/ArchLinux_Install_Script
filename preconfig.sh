@@ -35,17 +35,26 @@ sgdisk -c 2:"Root" ${DISK}
 sgdisk -c 3:"Swap" $DISK
 
 
+#Getting partition Names
+disks=`(fdisk -l) | (grep "^/dev") | (awk '{print $1}')`
+partitionNames=()
+
+while read -r line; do
+   partitionNames+=("$line")
+done <<< "$disks"
+
+
 #Making the FileSystems
-mkfs.vfat -F32 -n "EFI" "${DISK}1"
-mkfs.ext4 -L "Root" "${DISK}2"
-mkswap -L "Swap" "${DISK}3"
+mkfs.vfat -F32 -n "EFI" "${partitionNames[1]}"
+mkfs.ext4 -L "Root" "${partitionNames[2]}"
+mkswap -L "Swap" "${partitionNames[3]}"
 
 
 #Mounting the disks
 mkdir -p /mnt/boot/efi
-mount -L "EFI" /mnt
-mount -L "Root" /mnt/boot/efi
-swapon -L "Swap"
+mount -L ${partitionNames[2]} /mnt
+mount -L ${partitionNames[1]} /mnt/boot/efi
+swapon ${partitionNames[3]}
 
 lsblk
 
