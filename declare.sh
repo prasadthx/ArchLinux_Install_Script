@@ -33,4 +33,8 @@ LANGUAGE=${LANGUAGE:-"en_IN.UTF-8"}
 read -p "Enter Boot Type UEFI/BIOS: " BOOT
 BOOT=${BOOT:-"UEFI"}
 
+printf "HOSTNAME="$HOSTNAME"\n" >> "install.conf"
+printf "USERNAME="$USERNAME"\n" >> "install.conf"
+printf "PASSWORD="$PASSWORD"\n" >> "install.conf"
+printf "LANGUAGE="$LANGUAGE"\n" >> "install.conf"
 sleep 3

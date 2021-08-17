@@ -15,6 +15,7 @@ cp postchroot.sh /mnt/postchroot.sh
 cp packages.sh /mnt/packages.sh
 cp aurpackages.sh /mnt/aurpackages.sh
 cp execute.sh /mnt/execute.sh
+cp install.conf /mnt/install.conf
 
 arch-chroot /mnt ./postchroot.sh
 #. ./postchroot.sh
