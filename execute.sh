@@ -17,7 +17,6 @@ cp aurpackages.sh /mnt/aurpackages.sh
 cp execute.sh /mnt/execute.sh
 
 arch-chroot /mnt ./postchroot.sh
-
+#. ./postchroot.sh
 umount -a
 
-reboot
