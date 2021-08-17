@@ -12,7 +12,7 @@ sleep 2
 pacman -Syy
 
 #Install Arch Linux essentials
-pacstrap /mnt base linux linux-lts linux-firmware vim --noconfirm --needed
+pacstrap /mnt base linux linux-firmware vim --noconfirm --needed
 
 
 #Generating fstab file

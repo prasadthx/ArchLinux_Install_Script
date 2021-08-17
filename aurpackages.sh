@@ -5,11 +5,11 @@ echo "====================== Installing AUR packages ======================="
 echo "======================================================================"
 
 aurpackages=(
-      'kmplayer-git-master'
-      'coreimage'
+#      'kmplayer-git-master'
+#      'coreimage'
       'deepin-file-manager-git'
-      'google-chrome'
-      'xdman'
+#      'google-chrome'
+#      'xdman'
 )
 
 

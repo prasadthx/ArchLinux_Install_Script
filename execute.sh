@@ -11,12 +11,16 @@ chmod +x aurpackages.sh
 . ./preconfig.sh
 . ./install.sh
 
+cp postchroot.sh /mnt/postchroot.sh
+cp packages.sh /mnt/packages.sh
+cp aurpackages.sh /mnt/aurpackages.sh
+
 arch-chroot /mnt /bin/bash << EOF
 . ./postchroot.sh
 . ./packages.sh
 . ./aurpackages.sh
 
-mkinitcpio -p linux linux-lts
+mkinitcpio -p linux
 
 grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
 
