@@ -36,3 +36,22 @@ echo "======================= Setting Up Complete =========================="
 echo "======================================================================"
 
 sleep 3
+
+. ./packages.sh
+. ./aurpackages.sh
+
+mkinitcpio -p linux
+
+grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+
+systemctl enable NetworkManager
+systemctl enable lightdm
+systemctl enable cups
+systemctl enable bluez
+
+exit
+
+reboot
