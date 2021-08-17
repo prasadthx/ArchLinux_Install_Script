@@ -8,8 +8,8 @@ chmod +x packages.sh
 chmod +x aurpackages.sh
 
 . ./declare.sh
-. ./preconfig.sh
-. ./install.sh
+#. ./preconfig.sh
+#. ./install.sh
 
 cp postchroot.sh /mnt/postchroot.sh
 cp packages.sh /mnt/packages.sh
