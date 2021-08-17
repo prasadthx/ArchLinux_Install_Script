@@ -1,13 +1,13 @@
 #!/bin/bash
 
-#chmod +x declare.sh
+chmod +x declare.sh
 #chmod +x preconfig.sh
 #chmod +x install.sh
 chmod +x postchroot.sh
 chmod +x packages.sh
 chmod +x aurpackages.sh
 
-#. ./declare.sh
+. ./declare.sh
 #. ./preconfig.sh
 #. ./install.sh
 
