@@ -1,23 +1,22 @@
 #!/bin/bash
 
 chmod +x declare.sh
-#chmod +x preconfig.sh
-#chmod +x install.sh
-chmod +x postchroot.sh
+chmod +x preconfig.sh
+chmod +x install.sh
+chmod +x post-chroot-execute.sh
 chmod +x packages.sh
 chmod +x aurpackages.sh
 
 . ./declare.sh
-#. ./preconfig.sh
-#. ./install.sh
+. ./preconfig.sh
+. ./install.sh
 
-cp postchroot.sh /mnt/postchroot.sh
+cp post-chroot-execute.sh /mnt/post-chroot-execute.sh
 cp packages.sh /mnt/packages.sh
 cp aurpackages.sh /mnt/aurpackages.sh
-cp execute.sh /mnt/execute.sh
 cp install.conf /mnt/install.conf
 
 arch-chroot /mnt ./postchroot.sh
-#. ./postchroot.sh
+
 umount -a
 

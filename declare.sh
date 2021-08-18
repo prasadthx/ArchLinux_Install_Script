@@ -26,8 +26,8 @@ read -p "Enter Host Name [Default => Arch1234]: " PASSWORD
 PASSWORD=${PASSWORD:-"Arch1234"}
 
 #Set Up Language:-
-read -p "Enter Host Name [Default => en_IN.UTF-8]: " LANGUAGE
-LANGUAGE=${LANGUAGE:-"en_IN.UTF-8"}
+read -p "Enter Host Name [Default => en_IN UTF-8]: " LANGUAGE
+LANGUAGE=${LANGUAGE:-"en_IN UTF-8"}
 
 #Set Up Boot Type:-
 read -p "Enter Boot Type UEFI/BIOS: " BOOT
