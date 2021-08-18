@@ -56,6 +56,8 @@ mount ${partitionNames[1]} /mnt
 mount ${partitionNames[0]} /mnt/boot/efi
 swapon ${partitionNames[2]}
 
+sleep 5
+
 lsblk
 
 echo "======================================================================"
