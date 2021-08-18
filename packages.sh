@@ -33,7 +33,7 @@ packages=(
       'xorg'              #Xorg display server
       'plasma'            #For kde plasma desktop environment
       'lightdm'           #Lightdm display manager
-      'lightdm-webkit-theme-litarvan'    #Lightdm theme
+      'lightdm-webkit-theme-litarvan'    #Lightdm Litarvan's theme
 
       #Utilities
       'cups'              #Printer Support
@@ -50,7 +50,7 @@ packages=(
 
 for PKG in "${packages[@]}"; do
     echo "INSTALLING: ${PKG}"
-    sudo pacman -S "$PKG" --noconfirm --needed
+    pacman -S "$PKG" --noconfirm --needed
 done
 
 echo "======================================================================"

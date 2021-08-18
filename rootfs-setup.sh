@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source install.conf
 
 echo "======================================================================"
 echo "========================= Setting Up Rootfs =========================="
@@ -8,8 +9,7 @@ echo "======================================================================"
 #Set the timezone
 read -p "Enter your timezone in the format(Continent/Region) [Default => Asia/Kolkata]:-" TIMEZONE
 TIMEZONE=${TIMEZONE:-"Asia/Kolkata"}
-timedatectl set-timezone ${TIMEZONE}
-timedatectl set-timezone ${TIMEZONE}
+ln -sf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime
 hwclock --systohc
 
 

@@ -22,6 +22,9 @@ systemctl enable bluez
 systemctl enable vmtoolsd.service
 systemctl enable vmware-vmblock-fuse.service
 
+sed -i 's/^#greeter-session=example-gtk-gnome/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
+sed -i '/webkit_theme=litarvan/c\webkit_theme=litarvan' /etc/lightdm/lightdm-webkit2-greeter.conf
+
 exit
 
 reboot

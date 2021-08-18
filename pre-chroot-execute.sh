@@ -18,7 +18,7 @@ cp packages.sh /mnt/packages.sh
 cp aurpackages.sh /mnt/aurpackages.sh
 cp install.conf /mnt/install.conf
 
-arch-chroot /mnt ./postchroot.sh
+arch-chroot /mnt ./post-chroot-execute.sh
 
 umount -a
 
