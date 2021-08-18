@@ -4,6 +4,7 @@ source install.conf
 
 sleep 3
 #Installing packages
+. ./rootfs-setup.sh
 . ./packages.sh
 . ./aurpackages.sh
 #
