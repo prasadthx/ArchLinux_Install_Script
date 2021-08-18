@@ -51,7 +51,8 @@ mkswap "${partitionNames[2]}"
 
 
 #Mounting the disks
-mkdir -p /mnt/boot/efi
+mkdir /mnt/boot
+mkdir /mnt/boot/efi
 mount ${partitionNames[1]} /mnt
 mount ${partitionNames[0]} /mnt/boot/efi
 swapon ${partitionNames[2]}
