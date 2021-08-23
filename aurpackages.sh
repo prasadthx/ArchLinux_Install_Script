@@ -7,9 +7,9 @@ echo "====================== Installing AUR packages ======================="
 echo "======================================================================"
 
 aurpackages=(
-       'coreimage'
-       'google-chrome'
-       'xdman'
+       'coreimage'            #Image Viewer CoreImage
+       'google-chrome'        #Google Chrome Browser
+       'xdman'                #Download Manager (X Download Manager)
 )
 
 
